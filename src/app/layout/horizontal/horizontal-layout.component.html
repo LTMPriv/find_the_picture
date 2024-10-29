@@ -1,0 +1,16 @@
+<app-navbar
+  *ngIf="!coreConfig.layout.navbar.hidden"
+  [ngClass]="
+    coreConfig.layout.navbar.customBackgroundColor === true
+      ? coreConfig.layout.navbar.background + ' ' + coreConfig.layout.navbar.backgroundColor
+      : coreConfig.layout.navbar.background
+  "
+  class="header-navbar horizontal-header-navbar navbar-expand-lg navbar navbar-fixed align-items-center navbar-shadow navbar-brand-center"
+  >
+</app-navbar>
+
+<div class="app-content content">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow" *ngIf="!coreConfig.layout.navbar.hidden"></div>
+  <content></content>
+</div>
